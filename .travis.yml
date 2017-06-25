@@ -12,7 +12,7 @@ matrix:
       before_script:
         - cd go
       go:
-       - master
+       - "1.8.3"
       install:
        - go get github.com/hyperledger/fabric/core/chaincode/shim
 
