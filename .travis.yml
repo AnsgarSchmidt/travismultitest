@@ -22,9 +22,9 @@ matrix:
         - python -m unittest discover -p Test.py
 
     - language: go
+      go: master
       before_script:
         - cd go
-      go: release
       install:
        - go get github.com/hyperledger/fabric/core/chaincode/shim
       script:
