@@ -1,0 +1,20 @@
+matrix:
+  include:
+    - language: python
+      python: "2.7"
+      python: "nightly"
+      before_script:
+        - cd python
+      script:
+        - python -m unittest discover
+
+   # - language: go
+   #   before_script:
+   #     - cd go
+   #   script:
+   #     - ./gradlew build connectedCheck
+
+notifications:
+  email:
+    - test@23-5.eu
+
