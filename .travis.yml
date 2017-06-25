@@ -1,24 +1,21 @@
 matrix:
   include:
     - language: python
-      python:
-        - 2.7
+      python: 2.7
       before_script:
         - cd python
       script:
         - python -m unittest discover -p Test.py
 
     - language: python
-      python:
-        - 3.6
+      python: 3.6
       before_script:
         - cd python
       script:
         - python -m unittest discover -p Test.py
 
     - language: python
-      python:
-        - nightly
+      python: nightly
       before_script:
         - cd python
       script:
