@@ -12,12 +12,15 @@ matrix:
       before_script:
         - cd go
       go:
-       - "1.8"
+       - 1.3.3
+       - 1.4.2
+       - 1.5.1
+       - release
+       - tip
       install:
        - go get github.com/hyperledger/fabric/core/chaincode/shim
-
-   #   script:
-   #     - ./gradlew build connectedCheck
+      script:
+        - go test -v ./...
 
 notifications:
   email:
