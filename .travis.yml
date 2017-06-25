@@ -2,7 +2,7 @@ matrix:
   include:
     - language: python
       python:
-        - "2.7"
+        - 2.7
       before_script:
         - cd python
       script:
@@ -10,7 +10,7 @@ matrix:
 
     - language: python
       python:
-        - "3.6"
+        - 3.6
       before_script:
         - cd python
       script:
@@ -18,7 +18,7 @@ matrix:
 
     - language: python
       python:
-        - "nightly"
+        - nightly
       before_script:
         - cd python
       script:
