@@ -28,7 +28,7 @@ matrix:
       install:
        - go get github.com/hyperledger/fabric/core/chaincode/shim
       script:
-        - go build ./
+        - make
 
 notifications:
   email:
