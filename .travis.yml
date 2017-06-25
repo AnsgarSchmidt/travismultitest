@@ -10,11 +10,11 @@ matrix:
       script:
         - python -m unittest discover -p Test.py
 
-    - language: go
-      before_script:
-        - cd go
-      go:
-       - master
+   # - language: go
+   #   before_script:
+   #     - cd go
+   #   go:
+   #    - master
    #   script:
    #     - ./gradlew build connectedCheck
 
