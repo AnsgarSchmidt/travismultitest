@@ -28,8 +28,10 @@ matrix:
       install:
         #- go get github.com/hyperledger/fabric/core/chaincode/shim
         - ls -al
+        - ls -al $GOPATH/src/github.com
         - mkdir -p $GOPATH/src/github.com/hyperledger
-        - git clone -b v0.6 http://gerrit.hyperledger.org/r/fabric -C $GOPATH/src/github.com/hyperledger
+        - ls -al $GOPATH/src/github.com/hyperledger
+        - git -C $GOPATH/src/github.com/hyperledger clone -b v0.6 http://gerrit.hyperledger.org/r/fabric
         - ls -al
       script:
         - pwd
