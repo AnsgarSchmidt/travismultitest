@@ -26,8 +26,10 @@ matrix:
       before_script:
         - cd go
       install:
-       - go get gerrit.hyperledger.org/r/fabric
+       - go get github.com/hyperledger/fabric
       script:
+        - pwd
+        - ls -al
         - go build ./
 
 notifications:
