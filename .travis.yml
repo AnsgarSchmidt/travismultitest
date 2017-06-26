@@ -26,7 +26,7 @@ matrix:
       before_script:
         - cd go
       install:
-       - go get github.com/hyperledger/fabric
+        - go get github.com/hyperledger/fabric/core/chaincode/shim
       script:
         - pwd
         - ls -al
