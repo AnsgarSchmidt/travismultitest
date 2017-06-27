@@ -8,34 +8,27 @@ matrix:
         - python -m unittest discover -p Test.py
 
     - language: python
-      python: 3.6
-      before_script:
-        - cd python
-      script:
-        - python -m unittest discover -p Test.py
-
-    - language: python
       python: nightly
       before_script:
         - cd python
       script:
         - python -m unittest discover -p Test.py
 
+    - language: node_js
+      node_js: 7
+      before_script:
+        - cd javascript
+      script:
+        - ls
+
     - language: go
       go: master
       before_script:
         - cd go
       install:
-        #- go get github.com/hyperledger/fabric/core/chaincode/shim
-        - ls -al
-        - ls -al $GOPATH/src/github.com
         - mkdir -p $GOPATH/src/github.com/hyperledger
-        - ls -al $GOPATH/src/github.com/hyperledger
-        - git -C $GOPATH/src/github.com/hyperledger clone -b v0.6 http://gerrit.hyperledger.org/r/fabric
-        - ls -al
+        - git   -C $GOPATH/src/github.com/hyperledger clone -b v0.6 http://gerrit.hyperledger.org/r/fabric
       script:
-        - pwd
-        - ls -al
         - go build ./
 
 notifications:
